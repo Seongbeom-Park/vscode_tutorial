@@ -22,6 +22,10 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(vscode.commands.registerCommand('helloworld.test', () => {
+		console.log('test');
+		vscode.window.showInformationMessage('test');
+	}));
 }
 
 // this method is called when your extension is deactivated
